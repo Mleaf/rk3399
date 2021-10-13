@@ -24,11 +24,9 @@ INSTALL_PROGRAM	:= $(INSTALL) -m 755
 LN		:= ln -sf
 RM		:= rm -f
 
-SRCTREE:=/home/mleaf/android/rk3399-android-10
-
-CC	= $(SRCTREE)/prebuilts/gcc/linux-x86/aarch64/gcc-linaro-6.3.1-2017.05-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-gcc
-AR	= $(SRCTREE)/prebuilts/gcc/linux-x86/aarch64/gcc-linaro-6.3.1-2017.05-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-ar
-STRIP	= $(SRCTREE)/prebuilts/gcc/linux-x86/aarch64/gcc-linaro-6.3.1-2017.05-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-strip
+CC	?= gcc
+AR	?= ar
+STRIP	?= strip
 
 CFLAGS		?= -O2
 # When debugging, use the following instead
