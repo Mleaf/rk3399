@@ -1,6 +1,6 @@
 /**
  * watchdog for swh-5190-v2.2
- * Copyright (C) 2019 Mleaf <mleaf90@gmail.com,350983773@qq.com>
+ * Copyright (C) 2021 Mleaf <mleaf90@gmail.com,350983773@qq.com>
  * 微信公众号 《WiFi物联网》
  *
  * mwol is free software: you can redistribute it and/or modify
