@@ -38,3 +38,7 @@
 </p>
 
 ## 如果该项目对您有帮助，请毫不犹豫点star，谢谢！
+
+## 强烈推荐佐大的 OpenWrt 培训班
+想学习 OpenWrt 开发，但是摸不着门道？自学没毅力？基础太差？怕太难学不会？
+不用怕大牛手把手教你OpenWrt，快来参加<跟着佐大学 OpenWrt 开发入门培训班> 佐大助你能学有所成，培训班报名地址：https://forgotfun.org/2018/04/openwrt-training-2018.html
