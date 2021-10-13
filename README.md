@@ -1,7 +1,8 @@
-[![license][1]][2]
+[![license][1]][2][3]
 
 [1]: https://img.shields.io/badge/license-GPLV3-brightgreen.svg?style=plastic
-[2]: https://github.com/Mleaf/rk3399/master/COPYING
+[2]: https://github.com/Mleaf/rk3399/blob/main/COPYING
+[3]: https://github.com/Mleaf/rk3399/blob/main/COPYING.LGPL
 
 ## 关于本项目：
 本项目是通过逆向SWH-5190-V2.2（一款RK3399主控的高性能智能主板）的看门狗程序（iic_watchdog）后，分析具体控制流程，重新实现的看门狗控制程序。
