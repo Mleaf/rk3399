@@ -1,0 +1,7 @@
+type i2c_watchdog, domain;
+type i2c_watchdog_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(i2c_watchdog)
+
+#============= i2c_watchdog ==============
+allow i2c_watchdog i2c_device:chr_file { ioctl open read write };

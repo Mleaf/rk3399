@@ -1,0 +1,48 @@
+#
+# Copyright (c) 2021 mleaf90@gmail.com.
+# (http://www.mleaf.org)
+#
+
+cc_defaults {
+    name: "watchdog_defaults",
+
+    cflags: [
+        "-Wno-multichar",
+        "-Wno-unused-const-variable",
+        "-Wno-unused-variable",
+        "-Wno-unused-parameter",
+        "-Wno-sign-compare",
+        "-Wno-parentheses-equality",
+        "-Wno-missing-field-initializers",
+        "-Wno-static-in-inline",
+        "-DAndroid",
+        "-DBUILDING_LIBICONV",
+        "-DIN_LIBRARY",
+        "-DLIBDIR=\"c\"",
+    ],
+	local_include_dirs: ["src/", "include/", "."],
+}
+
+cc_binary {
+    name: "i2c_watchdog",
+    defaults: ["watchdog_defaults"],
+	vendor: true,
+	include_dirs: ["vendor/rockchip/common/watchdog/"],
+
+ 
+    srcs: [
+		"lib/smbus.c",
+        "src/i2cbusses.c",
+		"src/i2c_watchdog.c",
+    ],
+
+    cflags: [
+		"-Wno-unused-variable",
+		"-Wno-unused-label",
+		"-Wno-pointer-arith",
+		"-Wno-pragma-pack",
+		"-Wno-date-time",
+		"-D_GNU_SOURCE",
+	],
+	init_rc: ["i2c_watchdog.rc"],
+}

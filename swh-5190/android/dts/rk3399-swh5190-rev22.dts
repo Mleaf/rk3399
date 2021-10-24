@@ -1,0 +1,50 @@
+// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
+/*
+ * Copyright (c) 2021 mleaf90@gmail.com.
+ * (http://www.mleaf.org)
+ */
+
+/dts-v1/;
+#include "rk3399-swh5190-common.dtsi"
+
+/ {
+	model = "Signway swh5190";
+	compatible = "signway,swh5190-v22", "rockchip,rk3399";
+};
+
+&mach {
+	hwrev = <4>;
+	model = "Signway swh5190";
+};
+
+&sdhci {
+	mmc-hs200-1_8v;
+	/delete-property/ mmc-hs400-1_8v;
+	/delete-property/ mmc-hs400-enhanced-strobe;
+};
+
+&i2s1 {
+	status = "disabled";
+	rockchip,playback-channels = <2>;
+	rockchip,capture-channels = <2>;
+	#sound-dai-cells = <0>;
+};
+
+&rt5651_card {
+	status = "disabled";
+	/delete-property/ pinctrl-0;
+	/delete-property/ simple-audio-card,hp-det-gpio;
+
+	simple-audio-card,cpu {
+		sound-dai = <&i2s1>;
+	};
+};
+
+&rk_wlan {
+	status = "okay";
+	wifi_chip_type = "ap6212";
+};
+
+&rk_bluetooth {
+	status = "okay";
+};

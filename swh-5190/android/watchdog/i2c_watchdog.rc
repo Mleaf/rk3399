@@ -1,0 +1,8 @@
+
+on early-boot
+    start i2c_watchdog
+
+service i2c_watchdog /vendor/bin/i2c_watchdog -d
+   user root
+   group system root
+   oneshot

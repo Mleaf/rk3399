@@ -1,0 +1,21 @@
+diff --git a/device/rockchip/common/sepolicy/vendor/file_contexts b/device/rockchip/common/sepolicy/vendor/file_contexts
+old mode 100644
+new mode 100755
+index 763cddbe7b..4e5b080557
+--- a/device/rockchip/common/sepolicy/vendor/file_contexts
++++ b/device/rockchip/common/sepolicy/vendor/file_contexts
+@@ -152,6 +152,7 @@
+ /sys/class/rfkill(/.*)?                 u:object_r:rk_bluetooth_file:s0
+ /proc/bluetooth/sleep/lpm               u:object_r:rk_bluetooth_file:s0
+ 
++/dev/i2c-0                              u:object_r:i2c_device:s0
+ /dev/i2c-[23]                           u:object_r:i2c_device:s0
+ /dev/spidev.*                           u:object_r:spi_device:s0
+ /sys/class/gpio/.*export                u:object_r:sysfs_gpio:s0
+@@ -204,3 +205,6 @@
+ 
+ #flash_img
+ /system/bin/flash_img.sh u:object_r:install_recovery_exec:s0
++
++#i2c watchdog
++/vendor/bin/i2c_watchdog u:object_r:i2c_watchdog_exec:s0
